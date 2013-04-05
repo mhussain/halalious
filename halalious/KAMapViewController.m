@@ -13,24 +13,34 @@
 
 @interface KAMapViewController ()
 
+@property (nonatomic, retain) MKMapView *map;
+
 @end
 
 @implementation KAMapViewController
+
+@synthesize map = _map;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        MKMapView *map = [[MKMapView alloc] initWithFrame:[[self view] bounds]];
-        [[self view] addSubview:map];
+        _map = [[MKMapView alloc] initWithFrame:[[self view] bounds]];
+        [_map setZoomEnabled:YES];
+        [_map setUserInteractionEnabled:YES];
+        [_map setShowsUserLocation:YES];
+        [[self view] addSubview:_map];
     }
     return self;
+}
+
+- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
+{
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning
