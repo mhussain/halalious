@@ -11,5 +11,6 @@
 @interface KAAnnotationCollection : NSObject
 
 -(NSArray *)getAllPoints;
+-(void)createAnnotations;
 
 @end
