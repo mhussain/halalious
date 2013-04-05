@@ -10,6 +10,7 @@
 #import <MapKit/MapKit.h>
 
 #import "KAMapViewController.h"
+#import "KAAnnotationCollection.h"
 
 @interface KAMapViewController ()
 
@@ -26,10 +27,12 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         _map = [[MKMapView alloc] initWithFrame:[[self view] bounds]];
+        KAAnnotationCollection *collection = [[KAAnnotationCollection alloc] init];        
         [_map setUserInteractionEnabled:YES];
         [_map setZoomEnabled:YES];
         [_map setShowsUserLocation:YES];        
         [_map setRegion:[self focusOnMelbourne] animated:YES];
+        [_map addAnnotations:[collection getAllPoints]];
 
         [[self view] addSubview:_map];
     }
@@ -39,6 +42,7 @@
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
 {
     NSLog(@"updated");
+    [mapView setCenterCoordinate:[[userLocation location] coordinate] animated:YES];
 }
 
 -(MKCoordinateRegion)focusOnMelbourne;
