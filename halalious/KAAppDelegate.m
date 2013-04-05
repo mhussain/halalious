@@ -7,19 +7,33 @@
 //
 
 #import "KAAppDelegate.h"
+#import "KAMapViewController.h"
+
+@interface KAAppDelegate ()
+
+@property (nonatomic, retain) KAMapViewController *mapController;
+
+@end
 
 @implementation KAAppDelegate
 
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
+@synthesize mapController = _mapController;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    _mapController = [[KAMapViewController alloc] initWithNibName:nil bundle:nil];
+    [[self window] setRootViewController:_mapController];
+
+    
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor magentaColor];
-    [self.window makeKeyAndVisible];
+//    self.window.backgroundColor = [UIColor magentaColor];
+    [[self window] makeKeyAndVisible];
+    [[self window] setBackgroundColor:[UIColor clearColor]];
     return YES;
 }
 

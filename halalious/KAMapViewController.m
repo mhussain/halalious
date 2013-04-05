@@ -6,6 +6,9 @@
 //  Copyright (c) 2013 Khalida Apps. All rights reserved.
 //
 
+#import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
+
 #import "KAMapViewController.h"
 
 @interface KAMapViewController ()
@@ -18,7 +21,8 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        MKMapView *map = [[MKMapView alloc] initWithFrame:[[self view] bounds]];
+        [[self view] addSubview:map];
     }
     return self;
 }
