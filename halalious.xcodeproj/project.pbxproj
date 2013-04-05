@@ -61,7 +61,7 @@
 		21B8CB6F170EBA5500B83E9B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		21B8CB71170EBA5500B83E9B /* halaliousTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = halaliousTests.h; sourceTree = "<group>"; };
 		21B8CB72170EBA5500B83E9B /* halaliousTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = halaliousTests.m; sourceTree = "<group>"; };
-		21B8CB7D170EBD5400B83E9B /* KAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KAViewController.h; sourceTree = "<group>"; };
+		21B8CB7D170EBD5400B83E9B /* KAMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KAMapViewController.h; sourceTree = "<group>"; };
 		21B8CB7E170EBD5400B83E9B /* KAMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KAMapViewController.m; sourceTree = "<group>"; };
 		21B8CB80170EBE4E00B83E9B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		21B8CB82170EBE5D00B83E9B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -176,7 +176,7 @@
 		21B8CB7C170EBD3600B83E9B /* MapController */ = {
 			isa = PBXGroup;
 			children = (
-				21B8CB7D170EBD5400B83E9B /* KAViewController.h */,
+				21B8CB7D170EBD5400B83E9B /* KAMapViewController.h */,
 				21B8CB7E170EBD5400B83E9B /* KAMapViewController.m */,
 			);
 			name = MapController;
